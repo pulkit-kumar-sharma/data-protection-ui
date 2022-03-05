@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './DeTokenize.module.css';
 import { Container, Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import DeTokenizationService from '../../service/DeTokenizationService';
@@ -9,11 +7,15 @@ const DeTokenize = () => {
 
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
+  const [failedCall, setFailedCall] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     DeTokenizationService.deTokenize(input).then((res) => {
-        setOutput(res.data);
+      setOutput(res.data);
+      setFailedCall(false);
+    }).catch((res) => {
+      setFailedCall(true);
     });
   };
 
@@ -35,14 +37,10 @@ const DeTokenize = () => {
         </Form>
       </Container>
       <Container className="w-100 bg-primary p-5 text-center" fluid>
-        <h1 className="text-light">De-Tokenized Value : {output}</h1>
+        <h1 className="text-light"> {failedCall ? `पहले Tokenize करे फिर De-Tokenize करे` : `De-Tokenized Value : ${output}`} </h1>
       </Container>
     </>
   );
 };
-
-DeTokenize.propTypes = {};
-
-DeTokenize.defaultProps = {};
 
 export default DeTokenize;

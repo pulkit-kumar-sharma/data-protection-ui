@@ -1,6 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
-import styles from "./Header.module.css";
 import { Container } from "react-bootstrap";
 
 const Header = () => (
@@ -9,9 +7,5 @@ const Header = () => (
     <h4 className="text-light">Protect Your Data</h4>
   </Container>
 );
-
-Header.propTypes = {};
-
-Header.defaultProps = {};
 
 export default Header;

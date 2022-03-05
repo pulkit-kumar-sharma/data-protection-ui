@@ -10,11 +10,11 @@ function App() {
     <>
     <Header/>
       <Container className="w-100" fluid>
-        <Row className="p-5">
-          <Col className="p-5 m-2">
+        <Row className="bg-dark pb-5">
+          <Col className="bg-dark">
             <Tokenize />
           </Col>
-          <Col className="p-5 m-2">
+          <Col className="bg-dark">
             <DeTokenize />
           </Col>
         </Row>

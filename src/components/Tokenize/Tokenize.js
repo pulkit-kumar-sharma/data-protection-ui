@@ -2,8 +2,6 @@ import React from 'react';
 import { Container, Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import TokenizationService from '../../service/TokenizationService';
-import PropTypes from 'prop-types';
-import styles from './Tokenize.module.css';
 
 const Tokenize = () => {
 
@@ -40,9 +38,5 @@ const Tokenize = () => {
     </>
   );
 };
-
-Tokenize.propTypes = {};
-
-Tokenize.defaultProps = {};
 
 export default Tokenize;
