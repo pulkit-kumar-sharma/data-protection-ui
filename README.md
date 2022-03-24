@@ -23,3 +23,6 @@ docker-compose up
 ```
 
 Open [Localhost](http://localhost:4000) in your browser and enjoy.
+
+## Note
+* Maximum length of text it can tokenize is 100 characters.
