@@ -18,4 +18,8 @@ Run [Data-Protection-APIs](https://github.com/pulkits1998/data-protection-apis) 
 ![DeTokenizeWithWrongInputScreen](images/DeTokenizeWithWrongInputScreen.png)
 
 ## Local Setup
-To Be Updated
+```
+docker-compose up
+```
+
+Open [Localhost](http://localhost:4000) in your browser and enjoy.
